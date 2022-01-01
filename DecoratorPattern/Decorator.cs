@@ -29,6 +29,7 @@ namespace Design_Patterns_Assignment.DecoratorPattern
             Console.WriteLine("8 = Smaller");
             Console.WriteLine("9 = SubScript");
             Console.WriteLine("0 = SuperScript");
+            Console.WriteLine("Q = Quit");
 
             ConsoleKey TextInput = new ();
             while (true)
@@ -95,6 +96,9 @@ namespace Design_Patterns_Assignment.DecoratorPattern
                         anyDecorator = new Superscript(anyDecorator);
                         string superscriptstring = anyDecorator.Content();
                         Console.WriteLine(superscriptstring);
+                        break;
+                    case ConsoleKey.Q:
+                        Environment.Exit(0);
                         break;
                 }
             }
